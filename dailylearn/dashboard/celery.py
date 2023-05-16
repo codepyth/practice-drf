@@ -2,9 +2,9 @@ import os
 from celery import Celery
 
 # Set the default Django settings module for the 'celery' program.
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'your_project_name.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dailylearn.settings')
 
-app = Celery('your_project_name')
+app = Celery('dailylearn')
 
 # Using a string here means the worker will not have to
 # pickle the object when using Windows.

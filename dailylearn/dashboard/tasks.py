@@ -6,6 +6,7 @@ from .models import ImageModel
 
 @shared_task
 def generate_thumbnail_and_save_to_db(image_id):
+    print(image_id)
     # Get the image from the database
     image = ImageModel.objects.get(pk=image_id)
 
@@ -14,7 +15,8 @@ def generate_thumbnail_and_save_to_db(image_id):
         img = Image.open(f)
 
         # Generate the thumbnail using Pillow
-        thumbnail = img.thumbnail((100, 100))
+        img.thumbnail((100, 100))
+        thumbnail = img.copy()
 
     # Save the thumbnail to the database
     thumbnail_file = ContentFile(thumbnail.tobytes())

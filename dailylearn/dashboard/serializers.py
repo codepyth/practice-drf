@@ -1,4 +1,4 @@
-from tasks import generate_thumbnail_and_save_to_db
+from .tasks import generate_thumbnail_and_save_to_db
 from rest_framework import serializers
 from .models import ImageModel
 
