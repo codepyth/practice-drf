@@ -1,4 +1,4 @@
-import random
+# import random
 
 # both = 0
 # fizzbuzz_list = []
